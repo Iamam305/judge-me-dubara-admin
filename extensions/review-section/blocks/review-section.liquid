@@ -1,0 +1,16 @@
+{% assign url = 'https://judge-me-dubara-client.vercel.app/' %}
+{% assign url_prefix = 'shopId=' | append: shop.id | append: '&productId=' | append: product.id %}
+{% assign dynamic_url = url | append: '?' | append: url_prefix %}
+
+<iframe src="{{ dynamic_url }}" width="100%" height="600"></iframe>
+
+{% schema %}
+{
+  "name": "Rating Section",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}

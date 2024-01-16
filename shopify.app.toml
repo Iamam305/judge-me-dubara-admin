@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "judge-me-dusra"
+client_id = "e6f1d527b16e7817df2e693d68cb5232"
+application_url = "https://mistakes-queen-thomson-began.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://mistakes-queen-thomson-began.trycloudflare.com/auth/callback",
+  "https://mistakes-queen-thomson-began.trycloudflare.com/auth/shopify/callback",
+  "https://mistakes-queen-thomson-began.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-4b434c3e.myshopify.com"
